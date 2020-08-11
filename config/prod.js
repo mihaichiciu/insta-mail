@@ -3,5 +3,5 @@ module.exports = {
   googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
   mongoURI: process.env.MONGO_URI,
   cookieKey: process.env.COOKIE_KEY,
-  gogoleRedirectURI: 'https://hidden-woodland-47116.herokuapp.com',
+  googleRedirectURI: 'https://hidden-woodland-47116.herokuapp.com',
 };
