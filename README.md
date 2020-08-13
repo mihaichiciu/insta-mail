@@ -33,7 +33,7 @@ All keys must be correctly filled out. You need to suply following info:
 
 # Techstack
 #### Client
-* React
+* [React](https://reactjs.org/)
 * [React Router](https://github.com/ReactTraining/react-router) (request routing)
 * [React Redux](https://react-redux.js.org/) (state management)
 * [Axios](https://github.com/axios/axios) (http client)
@@ -41,8 +41,8 @@ All keys must be correctly filled out. You need to suply following info:
 * [create-react-app](https://github.com/facebook/create-react-app)
 
 #### Server
-* Nodejs
-* Express
+* [NodeJS](https://nodejs.org/en/)
+* [Express](https://expressjs.com/)
 * [Passportjs](http://www.passportjs.org/) (OAuth2 authentication)
 * [Stripe](https://stripe.com/) (Payments)
 * [Mongoose](https://mongoosejs.com/) (MongoDB persistence)
