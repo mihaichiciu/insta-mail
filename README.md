@@ -49,6 +49,6 @@ All keys must be correctly filled out. You need to suply following info:
 * [Sendgrid](https://sendgrid.com/) (Sending mails, webhooks for survey answers)
 
 #### Services used on production instance
-* [MongoAtlas]((https://www.mongodb.com/cloud/atlas) (hosting MongoDB instances)
+* [MongoAtlas](https://www.mongodb.com/cloud/atlas) (hosting MongoDB instances)
 * [Stripe](https://stripe.com/)
 * [SendGrid](https://sendgrid.com/)
