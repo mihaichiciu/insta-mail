@@ -22,7 +22,7 @@ class App extends Component {
           <Header />
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Landing} />
+              <Route exact path={'/'} component={Landing} />
               <PrivateRoute exact path="/surveys">
                 <Dashboard />
               </PrivateRoute>
