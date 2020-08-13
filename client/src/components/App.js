@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -7,6 +7,7 @@ import Landing from './Landing';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import NewSurvey from './survey/NewSurvey';
+import PrivateRoute from './PrivateRoute';
 
 class App extends Component {
   componentDidMount() {
@@ -20,9 +21,15 @@ class App extends Component {
         <BrowserRouter>
           <Header />
           <div className="container">
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
-            <Route path="/surveys/new" component={NewSurvey} />
+            <Switch>
+              <Route exact path="/" component={Landing} />
+              <PrivateRoute exact path="/surveys">
+                <Dashboard />
+              </PrivateRoute>
+              <PrivateRoute path="/surveys/new">
+                <NewSurvey />
+              </PrivateRoute>
+            </Switch>
           </div>
         </BrowserRouter>
       </>
@@ -30,4 +37,8 @@ class App extends Component {
   }
 }
 
-export default connect(null, actions)(App);
+function mapStateToProps({ auth }) {
+  return { auth };
+}
+
+export default connect(mapStateToProps, actions)(App);
