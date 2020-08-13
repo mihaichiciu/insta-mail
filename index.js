@@ -5,6 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport'); // ce este in services/passport.js este executat, nu ma intereseaza sa preiau ceva de acolo
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -23,8 +24,9 @@ app.use(passport.session());
 
 const authRoutes = require('./routes/auth');
 const billingRoutes = require('./routes/billing');
+const surveyRoutes = require('./routes/survey');
 
-app.use('/', authRoutes, billingRoutes);
+app.use('/', authRoutes, billingRoutes, surveyRoutes);
 
 if (process.env.NODE_ENV === 'production') {
   // Express serves up production assets
