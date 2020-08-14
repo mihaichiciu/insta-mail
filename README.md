@@ -1,6 +1,5 @@
 # InstaMail
-This is an application for sending email surveys and collecting responses. It is a full stack application for education purposes.
-The idea and initial version of the application is based on the course from Stephen Grider from Udemy.com. 
+This is an application for sending email surveys and collecting responses. An user can log with a Google Account, it can buy credits in order to send emails to a specific list addresses. One credit equals one address the send an email to. After the user has bought credits, it can create a survey that and see it in the Dashboard page to view the responses of it's clients.
 
 Here is a running [demo](https://hidden-woodland-47116.herokuapp.com/) on Heroku.
 
