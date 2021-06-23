@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
 require('./models/Survey');
-require('./services/passport'); // ce este in services/passport.js este executat, nu ma intereseaza sa preiau ceva de acolo
+require('./services/passport');
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
